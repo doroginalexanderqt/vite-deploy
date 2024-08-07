@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# React Credit Calculator
+#### *Based on the vite react-ts template*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Manual testing:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Positive:
+1. Open the app
+2. Enter amount, rate, term
+3. The button `Calculate` should become clickable
+4. Click `Calculate` or press `Enter`
+5. Credit Schedule should be displayed.
 
-## Expanding the ESLint configuration
+Negative:
+1. Open the app
+2. Enter amount, rate, term
+3. Try changing any value to a negative one (E.g. -5)
+4. The form should become disabled, the wrong field is highlighted, Credit Schedule is not displayed.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Working with repo
+`npm i` - install packages
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+`npm run dev` - local development
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`npm run lint` - run vite eslint presets
+
+`npm run build` - build the app
